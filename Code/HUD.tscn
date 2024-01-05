@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://hg2juo04vdje"]
+
+[ext_resource type="Texture2D" uid="uid://cattd100twoyg" path="res://Image/Flag.png" id="1_5ucfa"]
+[ext_resource type="Texture2D" uid="uid://xicda076cyrn" path="res://Image/Time.png" id="2_okxrq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c3su8"]
+bg_color = Color(0.552941, 0.611765, 0.639216, 1)
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_top = 700.0
+offset_right = 750.0
+offset_bottom = 750.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_c3su8")
+
+[node name="Flag" type="Sprite2D" parent="."]
+position = Vector2(50, 700)
+texture = ExtResource("1_5ucfa")
+offset = Vector2(25, 25)
+
+[node name="Label_Flag" type="Label" parent="."]
+custom_minimum_size = Vector2(50, 50)
+offset_top = 700.0
+offset_right = 50.0
+offset_bottom = 750.0
+theme_override_font_sizes/font_size = 24
+text = "40"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Time" type="Sprite2D" parent="."]
+position = Vector2(150, 700)
+scale = Vector2(0.09748, 0.09748)
+texture = ExtResource("2_okxrq")
+offset = Vector2(256, 256)
+
+[node name="Label_Time" type="Label" parent="."]
+custom_minimum_size = Vector2(50, 50)
+offset_left = 100.0
+offset_top = 700.0
+offset_right = 150.0
+offset_bottom = 750.0
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1

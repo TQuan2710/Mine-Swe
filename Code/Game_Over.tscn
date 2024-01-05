@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://7tf0hyn8erk7"]
+
+[ext_resource type="StyleBox" uid="uid://bojhggnho0xwu" path="res://Code/Game_Over.tres" id="1_6sroh"]
+[ext_resource type="Script" path="res://Code/Game_Over.gd" id="1_b308x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ndbr5"]
+bg_color = Color(0, 0.4, 0.666667, 1)
+
+[node name="GameOver" type="CanvasLayer"]
+script = ExtResource("1_b308x")
+
+[node name="ResetButton" type="Button" parent="."]
+offset_left = 325.0
+offset_top = 700.0
+offset_right = 475.0
+offset_bottom = 750.0
+theme_override_colors/font_color = Color(0.894118, 0.176471, 0.498039, 1)
+theme_override_colors/font_pressed_color = Color(0.894118, 0.176471, 0.498039, 1)
+theme_override_colors/font_hover_color = Color(0.894118, 0.176471, 0.498039, 1)
+theme_override_colors/font_focus_color = Color(0.894118, 0.176471, 0.498039, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("1_6sroh")
+theme_override_styles/hover = ExtResource("1_6sroh")
+theme_override_styles/pressed = ExtResource("1_6sroh")
+text = "Try Again?"
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 250.0
+offset_top = 300.0
+offset_right = 550.0
+offset_bottom = 400.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ndbr5")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 250.0
+offset_top = 300.0
+offset_right = 550.0
+offset_bottom = 400.0
+theme_override_colors/font_color = Color(0.74902, 0.592157, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "YOU WON"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]
